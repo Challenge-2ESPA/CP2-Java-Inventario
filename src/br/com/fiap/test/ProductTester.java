@@ -34,6 +34,10 @@ public class ProductTester {
         Produto p1 = new Produto(tempName, tempPrice, tempQty, tempNumber);
         
         Produto p2 = new Produto();
+        p2.setNome("Notebook");
+        p2.setPreco(3500.00);
+        p2.setQtd(4);
+        p2.setIdItem(2);
 
         // 10 b. Quatro produtos com o construtor com parâmetros
         Produto p3 = new Produto("Teclado", 149.90, 10, 3);
