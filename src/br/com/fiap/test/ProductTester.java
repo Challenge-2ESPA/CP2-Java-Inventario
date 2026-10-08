@@ -33,6 +33,9 @@ public class ProductTester {
         // 12 d. Criar objeto p1 com os valores inseridos pelo usuário
         Produto p1 = new Produto(tempName, tempPrice, tempQty, tempNumber);
 
+        // 16. Marcar o primeiro produto como descontinuado.
+        p1.setAtivo(false);
+
         // 13. Consumir a quebra de linha antes de ler o nome de p2.
         sc.nextLine();
 
