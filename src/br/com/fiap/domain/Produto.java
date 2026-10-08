@@ -7,6 +7,7 @@ public class Produto {
     private double preco;
     private int qtd;
     private int idItem;
+    private boolean ativo = true;
 
     public Produto(){
         // construtor vazio
@@ -21,10 +22,11 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Número do Item       : " + idItem +
-                "\nNome                 : " + nome +
+        return "Número do Item           : " + idItem +
+                "\nNome                  : " + nome +
                 "\nQuantidade em Estoque : " + qtd +
-                "\nPreço                : R$ " + String.format("%.2f", preco);
+                "\nPreço                 : R$ " + String.format("%.2f", preco) +
+                "\nStatus do Produto     : " + (ativo ? "Ativo" : "Descontinuado");
     }
 
     public int getIdItem() {
@@ -57,6 +59,14 @@ public class Produto {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public boolean getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
     }
 
 }
