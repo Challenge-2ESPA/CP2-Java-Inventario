@@ -18,5 +18,31 @@ public class ProductTester {
         Produto p5 = new Produto("Mousepad", 39.90, 5, 5);
 
         Produto p6 = new Produto("Monitor", 359.90, 3, 6);
+
+        // Tópico 11 para executar os prints
+        System.out.println("Começando os prints dos produtos:");
+        System.out.println("Produto 1");
+        System.out.println(p1);
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        System.out.println("Produto 2");
+        System.out.println(p2);
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        System.out.println("Produto 3");
+        System.out.println(p3);
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        System.out.println("Produto 4");
+        System.out.println(p4);
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        System.out.println("Produto 5");
+        System.out.println(p5);
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        System.out.println("Produto 6");
+        System.out.println(p6);
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
     }
 }
