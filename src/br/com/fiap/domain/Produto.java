@@ -3,10 +3,10 @@ package br.com.fiap.domain;
 public class Produto {
 
     // todos os produtos devem ter
-    String nome;
-    double preco;
-    int qtd;
-    int idItem;
+    private String nome;
+    private double preco;
+    private int qtd;
+    private int idItem;
 
     public void Produto(){
         // costrutor vazio
