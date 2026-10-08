@@ -21,10 +21,10 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Nome: " + nome +
-                "\nPreco: " + preco +
-                "\nQuantidade: " + qtd +
-                "\nId do Item: " + idItem;
+        return "Número do Item       : " + idItem +
+                "\nNome                 : " + nome +
+                "\nQuantidade em Estoque : " + qtd +
+                "\nPreço                : R$ " + String.format("%.2f", preco);
     }
 
     public int getIdItem() {
