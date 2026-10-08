@@ -30,10 +30,31 @@ public class ProductTester {
         System.out.print("Digite o número do item: ");
         tempNumber = sc.nextInt();
 
-        // 12 d. Criar objeto p1 com os valores inseridos pelo usuário 
+        // 12 d. Criar objeto p1 com os valores inseridos pelo usuário
         Produto p1 = new Produto(tempName, tempPrice, tempQty, tempNumber);
-        
-        Produto p2 = new Produto();
+
+        // 13. Consumir a quebra de linha antes de ler o nome de p2.
+        sc.nextLine();
+
+        System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.out.println("Cadastro do Produto 2");
+        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+        System.out.print("Digite o nome do produto: ");
+        tempName = sc.nextLine();
+
+        System.out.print("Digite a quantidade em estoque: ");
+        tempQty = sc.nextInt();
+
+        System.out.print("Digite o preço: ");
+        tempPrice = sc.nextDouble();
+
+        System.out.print("Digite o número do item: ");
+        tempNumber = sc.nextInt();
+
+        Produto p2 = new Produto(tempName, tempPrice, tempQty, tempNumber);
+
+        sc.close();
 
         // 10 b. Quatro produtos com o construtor com parâmetros
         Produto p3 = new Produto("Teclado", 149.90, 10, 3);
