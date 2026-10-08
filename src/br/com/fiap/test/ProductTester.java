@@ -2,11 +2,36 @@ package br.com.fiap.test;
 
 import br.com.fiap.domain.Produto;
 
+import java.util.Scanner;
+
 public class ProductTester {
     public static void main(String[] args){
 
-        // 10 a. Dois produtos com o construtor padrão (vazio)
-        Produto p1 = new Produto();
+        // 12 a. Scanner criado no início do main
+        Scanner sc = new Scanner(System.in);
+
+        // 12 b. Variáveis locais para armazenar dados temporários
+        String tempName;
+        int tempNumber;
+        int tempQty;
+        double tempPrice;
+
+        // 12 c. Solicitar valores ao usuário
+        System.out.println("Cadastro de Produto:");
+        System.out.print("Digite o nome do produto: ");
+        tempName = sc.nextLine();
+
+        System.out.print("Digite a quantidade em estoque: ");
+        tempQty = sc.nextInt();
+
+        System.out.print("Digite o preço: ");
+        tempPrice = sc.nextDouble();
+
+        System.out.print("Digite o número do item: ");
+        tempNumber = sc.nextInt();
+
+        // 12 d. Criar objeto p1 com os valores inseridos pelo usuário 
+        Produto p1 = new Produto(tempName, tempPrice, tempQty, tempNumber);
         
         Produto p2 = new Produto();
 
