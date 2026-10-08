@@ -8,11 +8,11 @@ public class Produto {
     private int qtd;
     private int idItem;
 
-    public void Produto(){
-        // costrutor vazio
+    public Produto(){
+        // construtor vazio
     }
 
-    public void Produto(String nome, double preco, int qtd, int idItem){
+    public Produto(String nome, double preco, int qtd, int idItem){
         this.nome = nome;
         this.preco = preco;
         this.qtd = qtd;
