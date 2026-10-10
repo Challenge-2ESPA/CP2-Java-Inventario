@@ -31,6 +31,7 @@ public class Produto {
                 "\nNome                  : " + nome +
                 "\nQuantidade em Estoque : " + qtd +
                 "\nPreço                 : R$ " + String.format("%.2f", preco) +
+                "\nValor do Estoque      : R$ " + String.format("%.2f", calcularValorInventario()) +
                 "\nStatus do Produto     : " + (ativo ? "Ativo" : "Descontinuado");
     }
 
