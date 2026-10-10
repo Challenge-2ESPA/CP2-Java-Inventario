@@ -20,6 +20,11 @@ public class Produto {
         this.idItem = idItem;
     }
 
+    // 17. Calcular o valor total do estoque deste produto.
+    public double calcularValorInventario() {
+        return preco * qtd;
+    }
+
     @Override
     public String toString() {
         return "Número do Item           : " + idItem +
