@@ -1,11 +1,12 @@
+
 package br.com.fiap.test;
 
 import br.com.fiap.domain.Produto;
-
 import java.util.Scanner;
 
 public class ProductTester {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
 
         // 12 a. Scanner criado no início do main
         Scanner sc = new Scanner(System.in);
@@ -27,90 +28,71 @@ public class ProductTester {
 
         } while (maxSize < 0);
 
-        sc.nextLine();
-
         // 12 b. Variáveis locais para armazenar dados temporários
         String tempName;
         int tempNumber;
         int tempQty;
         double tempPrice;
 
-        // 12 c. Solicitar valores ao usuário
-        System.out.println("Cadastro de Produto:");
-        System.out.print("Digite o nome do produto: ");
-        tempName = sc.nextLine();
+        // 20. Verificar se o usuário deseja cadastrar produtos
+        if (maxSize == 0) {
 
-        System.out.print("Digite a quantidade em estoque: ");
-        tempQty = sc.nextInt();
+            System.out.println("Não há produtos!");
 
-        System.out.print("Digite o preço: ");
-        tempPrice = sc.nextDouble();
+        } else {
 
-        System.out.print("Digite o número do item: ");
-        tempNumber = sc.nextInt();
+            // 20. Criar um array com a quantidade informada
+            Produto[] Produtos = new Produto[maxSize];
 
-        // 12 d. Criar objeto p1 com os valores inseridos pelo usuário
-        Produto p1 = new Produto(tempName, tempPrice, tempQty, tempNumber);
+            // 21. Cadastrar os produtos utilizando um loop for
+            for (int i = 0; i < maxSize; i++) {
 
-        // 16. Marcar o primeiro produto como descontinuado.
-        p1.setAtivo(false);
+                // Limpar o buffer antes de ler o nome
+                sc.nextLine();
 
-        // 13. Consumir a quebra de linha antes de ler o nome de p2.
-        sc.nextLine();
+                System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("Cadastro do Produto " + (i + 1));
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
-        System.out.println("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.out.println("Cadastro do Produto 2");
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                // 21. Solicitar os dados de cada produto
+                System.out.print("Digite o nome do produto: ");
+                tempName = sc.nextLine();
 
-        System.out.print("Digite o nome do produto: ");
-        tempName = sc.nextLine();
+                System.out.print("Digite a quantidade em estoque: ");
+                tempQty = sc.nextInt();
 
-        System.out.print("Digite a quantidade em estoque: ");
-        tempQty = sc.nextInt();
+                System.out.print("Digite o preço: ");
+                tempPrice = sc.nextDouble();
 
-        System.out.print("Digite o preço: ");
-        tempPrice = sc.nextDouble();
+                System.out.print("Digite o número do item: ");
+                tempNumber = sc.nextInt();
 
-        System.out.print("Digite o número do item: ");
-        tempNumber = sc.nextInt();
+                // 21. Criar o objeto e armazenar no array
+                Produtos[i] = new Produto(
+                        tempName,
+                        tempPrice,
+                        tempQty,
+                        tempNumber
+                );
+            }
 
-        Produto p2 = new Produto(tempName, tempPrice, tempQty, tempNumber);
+            // 22. Exibir todos os produtos utilizando for each
+            System.out.println("\nComeçando os prints dos produtos:");
 
+            int contador = 1;
+
+            for (Produto produto : Produtos) {
+
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("Produto " + contador);
+                System.out.println(produto);
+                System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+
+                contador++;
+            }
+        }
+
+        // Fechar o Scanner após finalizar sua utilização
         sc.close();
-
-        // 10 b. Quatro produtos com o construtor com parâmetros
-        Produto p3 = new Produto("Teclado", 149.90, 10, 3);
-
-        Produto p4 = new Produto("Mouse", 79.90, 15, 4);
-
-        Produto p5 = new Produto("Mousepad", 39.90, 5, 5);
-
-        Produto p6 = new Produto("Monitor", 359.90, 3, 6);
-
-        // Tópico 11 para executar os prints
-        System.out.println("Começando os prints dos produtos:");
-        System.out.println("Produto 1");
-        System.out.println(p1);
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
-        System.out.println("Produto 2");
-        System.out.println(p2);
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
-        System.out.println("Produto 3");
-        System.out.println(p3);
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
-        System.out.println("Produto 4");
-        System.out.println(p4);
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
-        System.out.println("Produto 5");
-        System.out.println(p5);
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-
-        System.out.println("Produto 6");
-        System.out.println(p6);
-        System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
     }
 }
